@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img
-              src="/manus-storage/logo_transparent_767deb0e.png"
+              src="/manus-storage/logo_lightblue_833df136.png"
               alt="Pomerania Rent"
               className="h-24 w-auto object-contain mb-4"
             />
