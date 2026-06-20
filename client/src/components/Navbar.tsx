@@ -44,9 +44,9 @@ export default function Navbar() {
           className="flex items-center gap-3 group"
         >
           <img
-            src="/manus-storage/logo_final_bb205a97.png"
+            src="/manus-storage/logo_transparent_767deb0e.png"
             alt="Pomerania Rent Logo"
-            className="h-14 md:h-18 w-auto object-contain brightness-125 drop-shadow-[0_2px_12px_rgba(212,168,67,0.35)]"
+            className="h-14 md:h-18 w-auto object-contain"
           />
         </a>
 
