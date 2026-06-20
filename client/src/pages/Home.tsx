@@ -1,25 +1,27 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+/* =============================================================
+   POMERANIA RENT – Home Page
+   Haff Noir Design: Alle Sektionen zusammengeführt
+   ============================================================= */
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import FleetSection from "@/components/FleetSection";
+import WaterSection from "@/components/WaterSection";
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-[oklch(0.14_0.025_240)]">
+      <Navbar />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <HeroSection />
+        <FleetSection />
+        <WaterSection />
+        <AboutSection />
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }
