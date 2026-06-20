@@ -16,7 +16,7 @@ export default function Footer() {
             <img
               src="/manus-storage/logo_transparent_767deb0e.png"
               alt="Pomerania Rent"
-              className="h-12 w-auto object-contain mb-4"
+              className="h-24 w-auto object-contain mb-4"
             />
             <p className="text-sm text-white/45 leading-relaxed max-w-xs">
               Exklusiver Fahrzeug- und Wassersportverleih in Vorpommern

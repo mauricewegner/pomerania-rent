@@ -36,7 +36,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between h-20 md:h-24">
+      <div className="container mx-auto flex items-center justify-between h-28 md:h-36">
         {/* Logo */}
         <a
           href="#"
@@ -46,7 +46,7 @@ export default function Navbar() {
           <img
             src="/manus-storage/logo_transparent_767deb0e.png"
             alt="Pomerania Rent Logo"
-            className="h-14 md:h-18 w-auto object-contain"
+            className="h-24 md:h-32 w-auto object-contain"
           />
         </a>
 
