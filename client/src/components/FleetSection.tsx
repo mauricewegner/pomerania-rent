@@ -13,7 +13,10 @@ const vehicles = [
     year: "1974",
     type: "Klassischer Sportwagen",
     color: "Schwarz",
-    images: ["/manus-storage/corvette_stingray_1974_a8429a3e.png"],
+    images: [
+      "/manus-storage/corvette_sunset_56c3f96f.jpg",
+      "/manus-storage/corvette_haff_dc932c20.jpg",
+    ],
     description:
       "Ein ikonischer amerikanischer Sportwagen – für Liebhaber, besondere Anlässe und unvergessliche Ausfahrten entlang der Alleen Vorpommerns.",
     specs: [
