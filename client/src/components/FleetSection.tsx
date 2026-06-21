@@ -34,8 +34,8 @@ const vehicles = [
     type: "Elektrischer Luxus-SUV",
     color: "Schwarz",
     images: [
+      "/manus-storage/eqc_haff_new_f2b253bd.jpg",
       "/manus-storage/eqc_reetdach_e91e8730.jpg",
-      "/manus-storage/eqc_parkplatz_9171646c.jpg",
     ],
     description:
       "Moderner Luxus trifft auf emissionsfreies Fahren. Ideal für Familienausflüge, Inselerkundungen oder als komfortabler Premium-Reisegefährte.",
