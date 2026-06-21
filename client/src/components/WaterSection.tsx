@@ -10,6 +10,7 @@ const waterProducts = [
     id: "jetski",
     name: "Jetski",
     subtitle: "Motorisierter Wasserspaß",
+    comingSoon: true,
     image: "/manus-storage/jetski_1050c0db.png",
     description:
       "Erlebe puren Adrenalinkick auf dem Stettiner Haff. Unsere modernen Jetskis bieten maximalen Fahrspaß auf den weiten Wasserflächen der Region.",
@@ -117,9 +118,14 @@ export default function WaterSection() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${'comingSoon' in product && product.comingSoon ? 'opacity-60 grayscale-[30%]' : ''}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.14_0.025_240)] via-transparent to-transparent" />
+                {'comingSoon' in product && product.comingSoon && (
+                  <div className="absolute top-4 right-4 bg-[oklch(0.72_0.12_75)] text-[oklch(0.14_0.025_240)] text-xs font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-sm shadow-lg">
+                    Coming Soon
+                  </div>
+                )}
               </div>
 
               {/* Content */}
@@ -146,24 +152,30 @@ export default function WaterSection() {
                   ))}
                 </div>
 
-                <button
-                  onClick={() => document.querySelector("#kontakt")?.scrollIntoView({ behavior: "smooth" })}
-                  className="w-full py-3 border text-sm font-semibold tracking-widest uppercase transition-all duration-200 rounded-sm active:scale-[0.98]"
-                  style={{
-                    borderColor: `${product.accentColor}80`,
-                    color: product.accentColor,
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.backgroundColor = product.accentColor;
-                    (e.currentTarget as HTMLButtonElement).style.color = "oklch(0.14 0.025 240)";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.backgroundColor = "transparent";
-                    (e.currentTarget as HTMLButtonElement).style.color = product.accentColor;
-                  }}
-                >
-                  Anfragen & Buchen
-                </button>
+                {'comingSoon' in product && product.comingSoon ? (
+                  <div className="w-full py-3 border border-white/15 text-white/30 text-sm font-semibold tracking-widest uppercase text-center rounded-sm cursor-not-allowed select-none">
+                    Bald verfügbar
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => document.querySelector("#kontakt")?.scrollIntoView({ behavior: "smooth" })}
+                    className="w-full py-3 border text-sm font-semibold tracking-widest uppercase transition-all duration-200 rounded-sm active:scale-[0.98]"
+                    style={{
+                      borderColor: `${product.accentColor}80`,
+                      color: product.accentColor,
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLButtonElement).style.backgroundColor = product.accentColor;
+                      (e.currentTarget as HTMLButtonElement).style.color = "oklch(0.14 0.025 240)";
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLButtonElement).style.backgroundColor = "transparent";
+                      (e.currentTarget as HTMLButtonElement).style.color = product.accentColor;
+                    }}
+                  >
+                    Anfragen & Buchen
+                  </button>
+                )}
               </div>
             </div>
           ))}
