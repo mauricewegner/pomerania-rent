@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FleetSection from "@/components/FleetSection";
 import WaterSection from "@/components/WaterSection";
+import PricingSection from "@/components/PricingSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <FleetSection />
         <WaterSection />
+        <PricingSection />
         <AboutSection />
         <ContactSection />
       </main>

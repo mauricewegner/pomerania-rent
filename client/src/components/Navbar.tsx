@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "Fahrzeuge", href: "#fahrzeuge" },
   { label: "Wassersport", href: "#wassersport" },
+  { label: "Preise", href: "#preise" },
   { label: "Über uns", href: "#ueber-uns" },
   { label: "Kontakt", href: "#kontakt" },
 ];
