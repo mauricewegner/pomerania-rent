@@ -60,11 +60,11 @@ export default function HeroSection() {
             className="font-['Playfair_Display'] text-5xl md:text-7xl font-bold text-white leading-[1.05] mb-6"
             style={{ animationDelay: "100ms" }}
           >
-            Fahre, was
+            Fahre, wovon
             <br />
             <em className="italic text-[oklch(0.72_0.12_75)]">andere</em>
             <br />
-            nur träumen.
+            träumen.
           </h1>
 
           {/* Subtext */}
