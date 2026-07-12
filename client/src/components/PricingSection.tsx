@@ -2,7 +2,7 @@
    POMERANIA RENT – Pricing Section
    Haff Noir: Dramatisch, klare Preistabellen, elegant
    ============================================================= */
-import { Car, Zap, Waves, Info } from "lucide-react";
+import { Car, Zap, Waves, Info, Bike } from "lucide-react";
 
 interface PriceRow {
   label: string;
@@ -161,7 +161,7 @@ export default function PricingSection() {
           <h3 className="text-xs font-medium tracking-[0.3em] uppercase text-white/30 mb-5 font-['DM_Sans']">
             Fahrzeuge
           </h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Corvette */}
             <ProductCard
               accent
@@ -197,6 +197,25 @@ export default function PricingSection() {
                   highlight: true,
                 },
                 { label: "Woche", price: "700 €", km: "1.500 km" },
+              ]}
+              deposit="1.500 €"
+              saleNote="Kauf auf Anfrage möglich – sprechen Sie uns an."
+            />
+
+            {/* Harley-Davidson */}
+            <ProductCard
+              icon={<Bike className="w-5 h-5" />}
+              title="Harley-Davidson Ultra Classic"
+              subtitle="2013 · 110 cui V-Twin · Blau/Schwarz"
+              rows={[
+                { label: "Tag", price: "240 €", km: "240 km" },
+                {
+                  label: "Wochenende",
+                  price: "360 €",
+                  km: "360 km",
+                  highlight: true,
+                },
+                { label: "Woche", price: "720 €", km: "960 km" },
               ]}
               deposit="1.500 €"
               saleNote="Kauf auf Anfrage möglich – sprechen Sie uns an."

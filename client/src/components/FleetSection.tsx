@@ -4,7 +4,7 @@
    EQC mit echten Fotos + Bildergalerie
    ============================================================= */
 import { useEffect, useRef, useState } from "react";
-import { Zap, Gauge, Calendar, Users, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { Zap, Gauge, Calendar, Users, ChevronLeft, ChevronRight, X, Wind } from "lucide-react";
 
 const vehicles = [
   {
@@ -46,6 +46,27 @@ const vehicles = [
     ],
     tag: "Elektro",
     tagColor: "oklch(0.55 0.15 200)",
+  },
+  {
+    id: "harley",
+    name: "Harley-Davidson Ultra Classic",
+    year: "2013",
+    type: "Touring-Motorrad",
+    color: "Blau/Schwarz",
+    images: [
+      "/manus-storage/harley_sunset_ff1b917d.jpg",
+      "/manus-storage/harley_haff1_3d98389c.jpg",
+      "/manus-storage/harley_engine_29cb93e5.jpg",
+    ],
+    description:
+      "Die Königin der Landstraße – ein Harley-Davidson Touring-Klassiker mit 110-cui-Motor, Vollverkleidung und Koffern für zwei. Für Touren, die man nie vergisst.",
+    specs: [
+      { icon: Gauge, label: "Motor", value: "110 cui V-Twin" },
+      { icon: Wind, label: "Typ", value: "Touring / Bagger" },
+      { icon: Users, label: "Sitze", value: "2 Personen" },
+    ],
+    tag: "Motorrad",
+    tagColor: "oklch(0.45 0.18 260)",
   },
 ];
 
