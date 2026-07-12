@@ -92,7 +92,7 @@ export default function HeroSection() {
           {/* Stats */}
           <div className="mt-16 flex gap-10">
             {[
-              { value: "2", label: "Premium-Fahrzeuge" },
+              { value: "3", label: "Premium-Fahrzeuge" },
               { value: "4+", label: "Wassersport-Geräte" },
               { value: "100%", label: "Küstenerlebnis" },
             ].map((stat) => (
