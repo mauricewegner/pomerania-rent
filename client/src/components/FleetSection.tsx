@@ -4,7 +4,7 @@
    EQC mit echten Fotos + Bildergalerie
    ============================================================= */
 import { useEffect, useRef, useState } from "react";
-import { Zap, Gauge, Calendar, Users, ChevronLeft, ChevronRight, X, Wind } from "lucide-react";
+import { Zap, Gauge, Calendar, Users, ChevronLeft, ChevronRight, X, Wind, ShieldAlert } from "lucide-react";
 
 const vehicles = [
   {
@@ -67,6 +67,7 @@ const vehicles = [
     ],
     tag: "Motorrad",
     tagColor: "oklch(0.45 0.18 260)",
+    licenseNote: "Führerschein Klasse A erforderlich",
   },
 ];
 
@@ -295,6 +296,16 @@ function VehicleCard({ vehicle, index }: { vehicle: typeof vehicles[0]; index: n
               </div>
             ))}
           </div>
+
+          {/* Führerschein-Hinweis (nur wenn vorhanden) */}
+          {vehicle.licenseNote && (
+            <div className="flex items-center gap-2.5 mb-4 px-3 py-2.5 rounded-sm bg-[oklch(0.45_0.18_260/0.12)] border border-[oklch(0.45_0.18_260/0.4)]">
+              <ShieldAlert size={15} className="text-[oklch(0.65_0.18_260)] shrink-0" />
+              <span className="text-xs font-semibold text-[oklch(0.75_0.15_260)] tracking-wide">
+                {vehicle.licenseNote}
+              </span>
+            </div>
+          )}
 
           {/* CTA */}
           <button
