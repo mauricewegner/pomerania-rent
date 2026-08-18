@@ -34,9 +34,9 @@ export default function HeroSection() {
       <div
         className="hero-bg absolute inset-0 will-change-transform"
         style={{
-          backgroundImage: `url('/manus-storage/corvette_stingray_1974_a8429a3e.png')`,
+          backgroundImage: `url('/manus-storage/corvette-sunset-reflections_1522d62a.webp')`,
           backgroundSize: "cover",
-          backgroundPosition: "center 30%",
+          backgroundPosition: "center 42%",
         }}
       />
 

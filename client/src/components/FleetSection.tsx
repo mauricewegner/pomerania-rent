@@ -1,7 +1,7 @@
 /* =============================================================
    POMERANIA RENT – Fleet Section
    Haff Noir: Fahrzeugkarten, filmisch, Hover-Reveal
-   EQC mit echten Fotos + Bildergalerie
+   Drei Fahrzeuggalerien mit aktuellen, echten Haff-Fotos
    ============================================================= */
 import { useEffect, useRef, useState } from "react";
 import { Zap, Gauge, Calendar, Users, ChevronLeft, ChevronRight, X, Wind, ShieldAlert } from "lucide-react";
@@ -14,8 +14,15 @@ const vehicles = [
     type: "Klassischer Sportwagen",
     color: "Schwarz",
     images: [
-      "/manus-storage/corvette_sunset_56c3f96f.jpg",
-      "/manus-storage/corvette_haff_dc932c20.jpg",
+      "/manus-storage/corvette-blue-hour-lantern_d9eeaefd.webp",
+      "/manus-storage/corvette-sailboat-jetty_23d8c95b.webp",
+      "/manus-storage/corvette-sunrise-picnic_bee9049d.webp",
+      "/manus-storage/corvette-reflections_2efaab09.webp",
+      "/manus-storage/corvette-sunset-reflections_1522d62a.webp",
+      "/manus-storage/corvette-country-road-sunset_25584d7a.png",
+      "/manus-storage/corvette-marina-front-daylight_78dd1743.png",
+      "/manus-storage/corvette-marina-rear-daylight_3595f938.png",
+      "/manus-storage/corvette-marina-rear-sunset_007e6b72.png",
     ],
     description:
       "Ein ikonischer amerikanischer Sportwagen – für Liebhaber, besondere Anlässe und unvergessliche Ausfahrten entlang der Alleen Vorpommerns.",
@@ -34,8 +41,11 @@ const vehicles = [
     type: "Elektrischer Luxus-SUV",
     color: "Schwarz",
     images: [
-      "/manus-storage/eqc_haff_new_f2b253bd.jpg",
-      "/manus-storage/eqc_reetdach_e91e8730.jpg",
+      "/manus-storage/eqc-blue-hour-picnic_f0f392c1.webp",
+      "/manus-storage/eqc-sunrise-tailgate_f9283a94.webp",
+      "/manus-storage/eqc-sailboat-jetty_6158dfd7.webp",
+      "/manus-storage/eqc-marina-front_2de98a37.webp",
+      "/manus-storage/eqc-farmhouse_96362d02.webp",
     ],
     description:
       "Moderner Luxus trifft auf emissionsfreies Fahren. Ideal für Familienausflüge, Inselerkundungen oder als komfortabler Premium-Reisegefährte.",
@@ -54,9 +64,12 @@ const vehicles = [
     type: "Touring-Motorrad",
     color: "Blau/Schwarz",
     images: [
-      "/manus-storage/harley_sunset_ff1b917d.jpg",
-      "/manus-storage/harley_haff1_3d98389c.jpg",
-      "/manus-storage/harley_engine_29cb93e5.jpg",
+      "/manus-storage/harley-blue-hour_47e87035.webp",
+      "/manus-storage/harley-sailboat-jetty_f2d17a1b.webp",
+      "/manus-storage/harley-sunrise-picnic_43e91f38.webp",
+      "/manus-storage/harley-harbor-side_5bd52629.png",
+      "/manus-storage/harley-haff-front_524f0d30.png",
+      "/manus-storage/harley-avenue-sunset_39bc8287.png",
     ],
     description:
       "Die Königin der Landstraße – ein Harley-Davidson Touring-Klassiker mit 110-cui-Motor, Vollverkleidung und Koffern für zwei. Für Touren, die man nie vergisst.",
@@ -231,19 +244,19 @@ function VehicleCard({ vehicle, index }: { vehicle: typeof vehicles[0]; index: n
           {/* Foto-Anzahl Badge */}
           {vehicle.images.length > 1 && (
             <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm text-white/80 text-xs px-2 py-1 rounded-sm font-['DM_Sans']">
-              1 / {vehicle.images.length} · Klicken zum Vergrößern
+              {activeImg + 1} / {vehicle.images.length} · Klicken zum Vergrößern
             </div>
           )}
         </div>
 
         {/* Thumbnail Strip (nur wenn mehrere Bilder) */}
         {vehicle.images.length > 1 && (
-          <div className="flex gap-2 px-4 pt-3">
+          <div className="flex gap-2 px-4 pt-3 pb-1 overflow-x-auto snap-x snap-mandatory">
             {vehicle.images.map((img, i) => (
               <button
                 key={i}
                 onClick={() => setActiveImg(i)}
-                className={`relative overflow-hidden rounded-sm flex-1 aspect-[16/9] border-2 transition-all duration-200 ${
+                className={`relative overflow-hidden rounded-sm w-24 shrink-0 snap-start aspect-[16/9] border-2 transition-all duration-200 ${
                   i === activeImg
                     ? "border-[oklch(0.72_0.12_75)]"
                     : "border-transparent opacity-50 hover:opacity-80"
@@ -346,13 +359,13 @@ export default function FleetSection() {
             </span>
           </div>
           <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold text-white mb-4">
-            Zwei Welten.
+            Drei Charaktere.
             <br />
             <em className="italic text-[oklch(0.72_0.12_75)]">Eine Küste.</em>
           </h2>
           <p className="text-white/60 max-w-xl text-base leading-relaxed">
-            Ob klassischer Muscle-Car oder moderner Elektro-SUV – beide Fahrzeuge
-            sind perfekt für die Straßen und Alleen Vorpommerns.
+            Ob klassischer Muscle-Car, moderner Elektro-SUV oder Tourenmotorrad –
+            jedes Fahrzeug schafft seinen eigenen Weg entlang der Haffküste.
           </p>
         </div>
 
